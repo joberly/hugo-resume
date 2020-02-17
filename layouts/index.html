@@ -33,4 +33,7 @@
          {{ partial "sectionSummary" . }}
       {{ end }}
    {{ end }}
+   {{ if .Site.Params.showCredits }}
+      {{ partial "credits.html" . }}
+   {{ end }}
 {{ end }}

@@ -1,0 +1,13 @@
+<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="credits">
+  <div class="my-auto" id="credits-content">
+    <h2 class="mb-5">Credits</h2>
+    {{ range .Site.Data.credits }}
+      {{ if isset . "link" }}
+        <a href="{{.link}}">{{ .text }}</a>
+      {{ else }}
+        {{ .text }}
+      {{ end }}
+      <br/><br/>
+    {{ end }}
+  </div>
+</section>
